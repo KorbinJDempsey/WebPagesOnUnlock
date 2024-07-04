@@ -1,5 +1,5 @@
 # WebPagesOnUnlock
-Python script that allows you to open tabs of webpages you select.
+Python script that allows you to open tabs of web pages you select.
 
 This script runs each time I unlock my computer. 
 I have added websites that I often visit to it, so that every time I unlock my laptop, I can immediately open the tabs that I check frequently. 
