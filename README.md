@@ -6,5 +6,4 @@ I have added websites that I often visit to it, so that every time I unlock my l
 This is my alternative to opening however many tabs and closing them each day. 
 
 Current goals:
-1. Add delete feature
-2. Clean up the code
+1. Clean up the code
