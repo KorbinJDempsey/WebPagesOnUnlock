@@ -30,8 +30,8 @@ class MyGUI:
         #Create Bottom Buttons
         self.addPage = tk.Button(self.root, text = "+", font = ('Arial', 18), command = self.add_page)
         self.addPage.place(x=0, y=750, height = 50, width=50)
-        #self.deletePage = tk.Button(self.root, text = "-", font = ('Arial', 18), command = self.delete_page)
-        #self.deletePage.place(x=50, y=750, height = 50, width=50)
+        self.deletePage = tk.Button(self.root, text = "-", font = ('Arial', 18), command = self.delete_page)
+        self.deletePage.place(x=50, y=750, height = 50, width=50)
         self.execute = tk.Button(self.root, text = "Open Tabs", font = ('Arial', 18), command = self.open_tabs)
         self.execute.place(x=100, y=750, height = 50, width=200)
 
@@ -96,7 +96,7 @@ class MyGUI:
             if self.listOfLinks[i] in self.checkedPages and self.checkedStates[i].get() == 0:
                 self.checkedPages.remove(self.listOfLinks[i])
     
-    '''
+    
     def delete_page(self):
         popup = tk.Toplevel(self.root)
         popup.title("Delete Command")
@@ -113,13 +113,14 @@ class MyGUI:
                 self.listOfWebpages.pop(index)
                 self.listOfLinks.pop(index)
                 self.numOfPages -= 1
+                messagebox.showinfo("Notice", "Web Page will be deleted upon script closing.")
             else:
                 messagebox.showerror("Error", "Webpage not found.")
             popup.destroy()
 
         submit_button = tk.Button(popup, text="Enter", command=on_submit)
         submit_button.pack(pady=20)
-    '''
+    
 
     def open_tabs(self):
         for link in self.checkedPages:
